@@ -1,0 +1,20 @@
+
+#!/usr/bin/env bash
+if [[ $EUID -ne 0 ]]; then
+   echo "This script must be run as root (use sudo)" >&2
+   exit 1
+fi
+
+cd ..
+git clone https://github.com/Rrominet/cpp-utils
+cd ./cpp-utils
+chmod +x ./build-n-install
+./build-n-install
+cd ../fxlauncher-backend
+mkdir -p ./build
+
+cd ./build
+chmod +x ../make
+chmod +x ../install
+../make gtk shared release libs="../../cpp-utils_dependencies" fm="../../cpp-utils"
+../install

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#
+mkdir -p /opt/fxlauncher
+rm -vf /opt/fxlauncher/fxlauncher
+cp -v ./fxlauncher /opt/fxlauncher/fxlauncher
+chmod +x /opt/fxlauncher/fxlauncher
+chmod 777 -R /opt/fxlauncher
+
+ln -s /opt/fxlauncher/fxlauncher /usr/local/bin/fxlauncher
+
+echo "installed."
