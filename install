@@ -6,6 +6,7 @@ cp -v ./fxlauncher /opt/fxlauncher/fxlauncher
 chmod +x /opt/fxlauncher/fxlauncher
 chmod 777 -R /opt/fxlauncher
 
+rm -vf /usr/local/bin/fxlauncher
 ln -s /opt/fxlauncher/fxlauncher /usr/local/bin/fxlauncher
 
-echo "installed."
+echo "fxlauncher installed."
