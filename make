@@ -1,4 +1,4 @@
-#!/usr/local/bin/python
+#!/usr/bin/env python3
 
 from ml import build
 from ml.boilerplate import cpp
