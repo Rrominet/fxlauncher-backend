@@ -3,6 +3,8 @@
 mkdir -p /opt/fxlauncher
 rm -vf /opt/fxlauncher/fxlauncher
 cp -v ./fxlauncher /opt/fxlauncher/fxlauncher
+cp -v ./version /opt/fxlauncher/version
+cp -v ./dependencies /opt/fxlauncher/dependencies
 chmod +x /opt/fxlauncher/fxlauncher
 chmod 777 -R /opt/fxlauncher
 

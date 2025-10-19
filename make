@@ -42,10 +42,16 @@ cpp.addToSrcs(srcs)
 cpp.addToLibs(libs)
 cpp.definitions += defs
 
-cpp.addToLibs([
-    "stdc++fs",
-    "mlapi",
-    ])
+cpp.addToLibs("stdc++fs")
+if not cpp.release : 
+    cpp.addToLibs([
+        fm + "/build/libmlapi.so",
+        ])
+
+elif cpp.release : 
+    cpp.addProject([
+        "/opt/mlapi/lib",
+        ])
 
 if("clean" in sys.argv or "clear" in sys.argv):
     cpp.clean()
